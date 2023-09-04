@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style_new.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="table-wrapper">
+
+      <table id="table">
+
+        <thead class="thead">
+          <tr>
+            <th class="table-header">Task</th>
+            <th class="table-header">Responsible</th>
+            <th class="table-header">Priority</th>
+          </tr>
+        </thead>
+
+        <tbody class="tbody">
+       
+        </tbody>
+
+      </table>
+
+      <div id="excel_data" class="mt-5"></div>
+    </div>
+
+
+    <div class="control-panel">
+
+      <div class="data-adding item-wrapper">
+        <div>
+          <p class="text">Task</p>
+          <input type="text" class="input-name">
+        </div>
+        <div>
+          <p class="text">Responsible</p>
+          <input type="text" class="input-type">
+        </div>
+        <div>
+          <p class="text">Priority</p>
+          <input type="number" class="input-age">
+        </div>
+
+        <div class="button-wrapper">
+          <button class="add-row">Add row</button>
+        </div>
+
+        <div class="button-wrapper">
+          <button class="remove-row">Remove row</button>
+        </div>
+
+      </div>
+
+
+      <div class="data-editing item-wrapper">
+        <p class="text">Choose cell for data editing</p>
+
+        <div class="editing-wrapper disabled">
+          <div>
+            <input type="text" class="input-edit" value="">
+          </div>
+
+          <div class="button-wrapper">
+            <button id="button-edit">Edit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="upload-download item-wrapper">
+
+        <div class="button-wrapper file-download">
+          <button id="complete">Complete</button>
+        </div>
+
+        <div class="button-wrapper file-download">
+          <button id="delete-first">Delete first</button>
+        </div>
+
+        <div class="button-wrapper file-download">
+          <button id="delete-last">Delete last</button>
+        </div>
+
+        <div class="button-wrapper file-download">
+          <button id="select-even">Even</button>
+        </div>
+
+        <div class="button-wrapper file-download">
+          <button id="select-odd">Odd</button>
+        </div>
+
+        <div class="button-wrapper file-upload">
+          <button id="uploadexcel">Upload table</button>
+          <input type="file" id="excel-file" class="input-file" />
+        </div>
+
+        <div class="button-wrapper file-download">
+          <button id="downloadexcel">Download .xlsx</button>
+        </div>
+
+        <div id="alert"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/upload.js"></script>
+  <script src="js/table2excel.js"></script>
+</body>
+
+</html>
