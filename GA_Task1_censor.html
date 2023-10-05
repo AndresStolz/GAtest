@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function censor() {
+            const pairs = new Array();
+            let censoredString;
+
+            return function (param1, param2) {
+                if (typeof param2 === "undefined") {
+                    censoredString = param1;
+                    for (let index = 0; index < pairs.length; index++) {
+                        censoredString = censoredString.replace(pairs[index][0], pairs[index][1]);
+                    }
+                    return censoredString;
+                } else {
+                    pairs.push([param1, param2])
+                }
+            }
+        }
+
+        const changeScene = censor();
+        changeScene('PHP', 'JS');
+        changeScene('backend', 'frontend')
+        console.log(changeScene('PHP is the most popular programming language for backend web-development'));
+
+    </script>
+</body>
+
+</html>
